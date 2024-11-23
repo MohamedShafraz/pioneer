@@ -1,13 +1,10 @@
 'use client';
-import { auth } from './firebaseConfig';
-import { signOut, onAuthStateChanged } from 'firebase/auth';
 import React, { useEffect, useState}  from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 export default function Header() {
     const [user, setUser] = useState<{ name: string } | null>(null);
-  const router = useRouter();
   console.log(localStorage.getItem('user'));
   useEffect(() => {
     // Retrieve user from localStorage

@@ -2,9 +2,8 @@
 import React from 'react';
 import Link from 'next/link';
 
-type Props = {}
 
-export default function Footer(props: Props) {
+export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white">
         <div className="container mx-auto py-8 px-6">
