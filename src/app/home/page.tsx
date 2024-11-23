@@ -3,6 +3,7 @@ import { auth } from '../firebaseConfig';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import React, { useEffect, useState}  from 'react';
 import { useRouter } from 'next/navigation';
+import Header from '../header';
 
 
 const Home: React.FC = () => {
@@ -26,7 +27,7 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
       {/* Header */}
-      <header className="bg-white shadow-md">
+      {/* <header className="bg-white shadow-md">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <img src="https://i.ibb.co/9TmJHBZ/logo.png" alt="Logo" className="h-10" />
           <nav className="space-x-6">
@@ -69,7 +70,8 @@ const Home: React.FC = () => {
             )}
           </div>
         </div>
-      </header>
+      </header> */}
+      <Header />
 
       {/* Hero Section */}
       <section className="relative bg-cover bg-center h-96" style={{ backgroundImage: 'url("https://via.placeholder.com/1920x600")' }}>

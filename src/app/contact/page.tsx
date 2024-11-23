@@ -1,12 +1,13 @@
 'use client';
 
 import React from 'react';
+import Header from '../header';
 
 const Contact: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-[url('/images/background.jpg')] bg-repeat bg-top bg-[length:100%]">
       {/* Header */}
-      <header className="bg-white shadow-md">
+      {/* <header className="bg-white shadow-md">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <img
             src="https://i.ibb.co/9TmJHBZ/logo.png"
@@ -30,7 +31,8 @@ const Contact: React.FC = () => {
             </a>
           </div>
         </div>
-      </header>
+      </header> */}
+      <Header />
 
       {/* Main Content */}
       <section className=" text-white py-16">
@@ -101,7 +103,7 @@ const Contact: React.FC = () => {
 
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600 transition-all"
+              className="w-full bg-green-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600 transition-all"
             >
               Send Message
             </button>
