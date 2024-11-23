@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebaseConfig';
 import Header from '../header';
+import { FirebaseError } from 'firebase/app';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>('');
@@ -58,61 +59,27 @@ const Login: React.FC = () => {
 
       alert('Login successful!');
       router.push('/'); // Redirect after successful login
-    } catch (error: any) {
-      const errorCode: string = error.code;
-      switch (errorCode) {
-        case 'auth/user-not-found':
-          alert('User not found. Please check your email.');
-          break;
-        case 'auth/wrong-password':
-          alert('Invalid password. Please try again.');
-          break;
-        default:
-          alert('An unknown error occurred. Please try again.');
+    } catch (error) {
+      if (error instanceof FirebaseError) {
+        const errorCode: string = error.code;
+        switch (errorCode) {
+          case 'auth/user-not-found':
+            alert('User not found. Please check your email.');
+            break;
+          case 'auth/wrong-password':
+            alert('Invalid password. Please try again.');
+            break;
+          default:
+            alert('An unknown error occurred. Please try again.');
+        }
+      } else {
+        alert('An unexpected error occurred.');
       }
-    }
+    } 
   };
 
   return (
     <>
-    {/* <header className="bg-white shadow-md">
-    <div className="container mx-auto flex justify-between items-center py-4 px-6">
-      <img
-        src="https://i.ibb.co/9TmJHBZ/logo.png"
-        alt="Logo"
-        className="h-10"
-      />
-      <nav className="space-x-6">
-        <a href="/" className="text-black ">
-          Home
-        </a>
-        <a href="/about" className="text-black ">
-                About Us
-              </a>
-        <a href="/services" className="text-black ">
-          Services
-        </a>
-        <a href="/faq" className="text-black ">
-          FAQ
-        </a>
-              
-        <a href="/contact" className="text-black ">
-          Contact
-        </a>
-      </nav>
-      <div className="space-x-4">
-        <a href="/login" className="text-black ">
-          Login
-        </a>
-        <a
-          href="/register"
-          className="text-white bg-green-500 px-4 py-2 rounded-md hover:bg-green-600"
-        >
-          Register
-        </a>
-      </div>
-    </div>
-  </header> */}
   <Header />
     <div className="flex justify-center items-center h-screen p-6 bg-[url('/images/background.jpg')] bg-repeat bg-top bg-[length:100%]">
       <div className="bg-white shadow-lg rounded-lg w-full max-w-md text-center p-8">
