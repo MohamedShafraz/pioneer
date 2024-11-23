@@ -6,14 +6,20 @@ import Footer from './footer';
 
 const Home: React.FC = () => {
   const [, setUser] = useState<{ name: string } | null>(null);
-  console.log(localStorage.getItem('user'));
   useEffect(() => {
-    // Retrieve user from localStorage
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) {
+    if (typeof window !== "undefined") {
+      const storedUser = localStorage.getItem('user');
+  if (storedUser) {
+    try {
       setUser(JSON.parse(storedUser));
+    } catch (error) {
+      console.error('Error parsing user data from localStorage', error);
+    }
+  }
     }
   }, []);
+
+
   return (
     <div className="min-h-screen flex flex-col justify-between bg-[url('/images/background.jpg')] bg-repeat bg-top bg-[length:100%]">
       {/* Header */}

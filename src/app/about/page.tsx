@@ -3,6 +3,7 @@
 import React from 'react';
 import Header from '../header';
 import Footer from '../footer';
+import Image from 'next/image';
 
 const About: React.FC = () => {
   return (
@@ -37,7 +38,7 @@ const About: React.FC = () => {
             navigate their academic and career journeys.
           </p>
         </section>
-        <section className="pt-10 self-center items-center"><center><img src="/images/group.jpg" /></center></section>
+        <section className="pt-10 self-center items-center"><center> <Image src="/images/group.jpg" alt="Our Team" width={600} height={400} /></center></section>
       </main>
 
       {/* Footer */}
