@@ -1,16 +1,12 @@
 'use client';
-import { auth } from './firebaseConfig';
-import { signOut, onAuthStateChanged } from 'firebase/auth';
 import React, { useEffect, useState}  from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 import Header from './header';
 import Footer from './footer';
 
 
 const Home: React.FC = () => {
-  const [user, setUser] = useState<{ name: string } | null>(null);
-  const router = useRouter();
+  const [, setUser] = useState<{ name: string } | null>(null);
   console.log(localStorage.getItem('user'));
   useEffect(() => {
     // Retrieve user from localStorage
