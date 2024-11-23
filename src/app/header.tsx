@@ -5,9 +5,7 @@ import React, { useEffect, useState}  from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-type Props = {}
-
-export default function Header(props: Props) {
+export default function Header() {
     const [user, setUser] = useState<{ name: string } | null>(null);
   const router = useRouter();
   console.log(localStorage.getItem('user'));
@@ -63,15 +61,15 @@ export default function Header(props: Props) {
               </>
             ) : (
               <>
-                <a href="/login" className="text-gray-700 hover:text-blue-500">
+                <Link href="/login" className="text-gray-700 hover:text-blue-500">
                   Login
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/register"
                   className="text-white bg-green-500 px-4 py-2 rounded-md hover:bg-green-600"
                 >
                   Register
-                </a>
+                </Link>
               </>
             )}
           </div>

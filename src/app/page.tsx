@@ -29,58 +29,6 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-[url('/images/background.jpg')] bg-repeat bg-top bg-[length:100%]">
       {/* Header */}
-      {/* <header className="bg-white shadow-md">
-        <div className="container mx-auto flex justify-between items-center py-4 px-6">
-          <img
-            src="https://i.ibb.co/9TmJHBZ/logo.png"
-            alt="Logo"
-            className="h-10"
-          />
-          <nav className="space-x-6">
-            <Link href="/" className="text-black ">
-              Home
-            </Link>
-            <Link href="/about" className="text-black ">
-                    About Us
-                  </Link>
-            <Link href="/services" className="text-black ">
-              Services
-            </Link>
-            <Link href="/faq" className="text-black ">
-              FAQ
-            </Link>
-                  
-            <Link href="/contact" className="text-black ">
-              Contact
-            </Link>
-          </nav>
-          <div className="space-x-4">
-            {user ? (
-              <>
-                <span className="text-gray-700">Hello, {user.name}</span>
-                <button
-                  onClick={handleLogout}
-                  className="text-white bg-red-500 px-4 py-2 rounded-md hover:bg-red-600"
-                >
-                  Logout
-                </button>
-              </>
-            ) : (
-              <>
-                <a href="/login" className="text-gray-700 hover:text-blue-500">
-                  Login
-                </a>
-                <a
-                  href="/register"
-                  className="text-white bg-green-500 px-4 py-2 rounded-md hover:bg-green-600"
-                >
-                  Register
-                </a>
-              </>
-            )}
-          </div>
-        </div>
-      </header> */}
       <Header />
 
       {/* Hero Section */}
