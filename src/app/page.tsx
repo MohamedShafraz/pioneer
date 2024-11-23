@@ -5,6 +5,7 @@ import React, { useEffect, useState}  from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Header from './header';
+import Footer from './footer';
 
 
 const Home: React.FC = () => {
@@ -188,13 +189,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white">
-        <div className="container mx-auto py-8 px-6">
-          <div className="text-center text-sm text-gray-400">
-            © 2024 Your Company. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
