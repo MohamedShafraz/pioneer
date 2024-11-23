@@ -228,7 +228,7 @@ const ServicesPage: React.FC = () => {
   
 
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-gray-100">
+    <div className="min-h-screen flex flex-col justify-between bg-[url('/images/background.jpg')] bg-repeat bg-top bg-[length:100%]">
       <Header />
 
       {/* Main Content */}
