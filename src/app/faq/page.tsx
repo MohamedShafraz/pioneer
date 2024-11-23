@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Header from '../header';
-import Link from 'next/link';
 import Footer from '../footer';
 
 const FAQ: React.FC = () => {
