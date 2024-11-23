@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebaseConfig';
+import Header from '../header';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>('');
@@ -74,7 +75,7 @@ const Login: React.FC = () => {
 
   return (
     <>
-    <header className="bg-white shadow-md">
+    {/* <header className="bg-white shadow-md">
     <div className="container mx-auto flex justify-between items-center py-4 px-6">
       <img
         src="https://i.ibb.co/9TmJHBZ/logo.png"
@@ -111,7 +112,8 @@ const Login: React.FC = () => {
         </a>
       </div>
     </div>
-  </header>
+  </header> */}
+  <Header />
     <div className="flex justify-center items-center h-screen p-6 bg-[url('/images/background.jpg')] bg-repeat bg-top bg-[length:100%]">
       <div className="bg-white shadow-lg rounded-lg w-full max-w-md text-center p-8">
         <img

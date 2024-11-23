@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from 'next/image';
+import Header from "../header";
 const profiles = {
   bio: [
     {
@@ -43,7 +44,7 @@ const profiles = {
     },
     {
       name: "Azeem Ziyad",
-      qualifications: "BBA Special In Accounting, CA(Complete)",
+      qualifications: "BSc Special In Accounting, ACCA member",
       position: "KPMG - Saudi Arabia (Riyadh)",
       image:"/images/Azeem.jpeg",
     },
@@ -228,7 +229,7 @@ const ServicesPage: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-gray-100">
       {/* Header */}
-      <header className="bg-white shadow-md">
+      {/* <header className="bg-white shadow-md">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <img
             src="https://i.ibb.co/9TmJHBZ/logo.png"
@@ -264,7 +265,8 @@ const ServicesPage: React.FC = () => {
             </a>
           </div>
         </div>
-      </header>
+      </header> */}
+      <Header />
 
       {/* Main Content */}
       <main className="flex-grow container mx-auto py-12 px-6">

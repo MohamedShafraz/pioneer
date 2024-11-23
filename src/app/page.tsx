@@ -3,6 +3,9 @@ import { auth } from './firebaseConfig';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import React, { useEffect, useState}  from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import Header from './header';
+import Footer from './footer';
 
 
 const Home: React.FC = () => {
@@ -26,7 +29,7 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-[url('/images/background.jpg')] bg-repeat bg-top bg-[length:100%]">
       {/* Header */}
-      <header className="bg-white shadow-md">
+      {/* <header className="bg-white shadow-md">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <img
             src="https://i.ibb.co/9TmJHBZ/logo.png"
@@ -34,22 +37,22 @@ const Home: React.FC = () => {
             className="h-10"
           />
           <nav className="space-x-6">
-            <a href="/" className="text-black ">
+            <Link href="/" className="text-black ">
               Home
-            </a>
-            <a href="/about" className="text-black ">
+            </Link>
+            <Link href="/about" className="text-black ">
                     About Us
-                  </a>
-            <a href="/services" className="text-black ">
+                  </Link>
+            <Link href="/services" className="text-black ">
               Services
-            </a>
-            <a href="/faq" className="text-black ">
+            </Link>
+            <Link href="/faq" className="text-black ">
               FAQ
-            </a>
+            </Link>
                   
-            <a href="/contact" className="text-black ">
+            <Link href="/contact" className="text-black ">
               Contact
-            </a>
+            </Link>
           </nav>
           <div className="space-x-4">
             {user ? (
@@ -77,7 +80,8 @@ const Home: React.FC = () => {
             )}
           </div>
         </div>
-      </header>
+      </header> */}
+      <Header />
 
       {/* Hero Section */}
       <section className="relative bg-cover bg-center h-96" style={{ backgroundImage: 'url("/images/home.jpg")' }}>
@@ -185,13 +189,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white">
-        <div className="container mx-auto py-8 px-6">
-          <div className="text-center text-sm text-gray-400">
-            © 2024 Your Company. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
