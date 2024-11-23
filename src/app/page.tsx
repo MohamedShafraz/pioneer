@@ -14,13 +14,6 @@ const Home: React.FC = () => {
       setUser(JSON.parse(storedUser));
     }
   }, []);
-
-  const handleLogout = () => {
-    // Clear user details from localStorage
-    localStorage.removeItem('user');
-    setUser(null);
-    alert('Logged out successfully!');
-  };
   return (
     <div className="min-h-screen flex flex-col justify-between bg-[url('/images/background.jpg')] bg-repeat bg-top bg-[length:100%]">
       {/* Header */}

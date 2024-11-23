@@ -141,7 +141,7 @@ const Login: React.FC = () => {
           onClick={() => router.push('/register')}
           className="w-full bg-green-500 text-white font-semibold text-sm py-2 rounded-md mt-4 hover:bg-green-600 transition duration-300"
         >
-          Don't have an account? Register
+           Don&#39;t have an account? Register
         </button>
       </div>
     </div>
