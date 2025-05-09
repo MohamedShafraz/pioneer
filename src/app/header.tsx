@@ -60,15 +60,15 @@ export default function Header() {
             </>
           ) : (
             <>
-              <Link href="/login" className="text-gray-700 hover:text-blue-500">
+              <Link href="/login" className="text-white bg-green-500 px-4 py-2 rounded-md hover:bg-green-60">
                 Login
               </Link>
-              <Link
+              {/* <Link
                 href="/register"
-                className="text-white bg-green-500 px-4 py-2 rounded-md hover:bg-green-600"
+                className="text-white bg-green-500 px-4 py-2 rounded-md hover:bg-green-60"
               >
                 Register
-              </Link>
+              </Link> */}
             </>
           )}
         </div>
