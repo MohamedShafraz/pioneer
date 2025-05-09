@@ -81,6 +81,7 @@ export default function Footer() {
 
           <div className="mt-6 text-center text-sm text-gray-400">
             © 2024 <Link href="http://mmmshafraz.me/">Mohamed Shafraz</Link>. All rights reserved.
+
           </div>
         </div>
       </footer>
