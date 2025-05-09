@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
 
           <div className="mt-6 text-center text-sm text-gray-400">
-            © 2024 Your Company. All rights reserved.
+            © 2024 Shafraz. All rights reserved.
           </div>
         </div>
       </footer>
