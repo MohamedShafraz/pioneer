@@ -137,12 +137,12 @@ const Login: React.FC = () => {
         </form>
 
         {/* Redirect to Register */}
-        <button
+        {/* <button
           onClick={() => router.push('/register')}
           className="w-full bg-green-500 text-white font-semibold text-sm py-2 rounded-md mt-4 hover:bg-green-600 transition duration-300"
         >
            Don&#39;t have an account? Register
-        </button>
+        </button> */}
       </div>
     </div>
     </>
